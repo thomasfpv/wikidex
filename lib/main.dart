@@ -1,35 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:wikidex/welcome_page.dart';
 import 'package:wikidex/home_page.dart';
-import 'package:wikidex/notification_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:wikidex/l10n/app_localizations.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialisation des notifications
-  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-      FlutterLocalNotificationsPlugin();
-
-  const AndroidInitializationSettings initializationSettingsAndroid =
-      AndroidInitializationSettings('@mipmap/ic_launcher');
-
-  const InitializationSettings initializationSettings = InitializationSettings(
-    android: initializationSettingsAndroid,
-  );
-
-  await flutterLocalNotificationsPlugin.initialize(
-    initializationSettings,
-    onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) {
-      // Gérer le clic sur la notification
-      print('Notification reçue: ${notificationResponse.payload}');
-    },
-  );
-
-  await NotificationService().init();
   runApp(const MyApp());
 }
 
