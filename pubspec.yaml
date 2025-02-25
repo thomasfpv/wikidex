@@ -1,7 +1,7 @@
 name: wikidex
 description: "Une application de faits aléatoires Wikipedia"
 publish_to: 'none'
-version: 0.1.1
+version: 0.1.1+5
 
 environment:
   sdk: ^3.7.0

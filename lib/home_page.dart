@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -42,7 +41,7 @@ class HomePageState extends State<HomePage> {
     ),
   ];
   int _currentGradient = 0;
-  int _factKey = 0;
+  //int _factKey = 0;
 
   @override
   void initState() {
