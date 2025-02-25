@@ -1,4 +1,4 @@
-package com.example.wikidex
+package com.thomasdev.wikidex
 
 import io.flutter.embedding.android.FlutterActivity
 import android.os.Bundle
